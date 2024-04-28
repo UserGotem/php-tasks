@@ -3,12 +3,14 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
  </head>
  
 <style>
+@import "bootstrap/scss/bootstrap";
 .jersey-10-regular {
     font-style: normal;
     box-shadow: 7px 7px 5px grey;
@@ -28,24 +30,12 @@
   </style>
  <body>
    <div class="jersey-10-regular vari2">
-   <?php
-      
-       function kaava()
-	   {
-		  $R1 = 100;
-	      $R2 = 100;
-	      $R3 = 100;
-
-		  $Rkok = 1 / ((1 / $R1) + (1 / $R2) + (1 / $R3));
-		
-		  echo "Arvot ovat: <br> RI - $R1 Ω <br>R2 - $R2 Ω <br>R3 - $R3 Ω <br>";
-		  $Rkok = number_format($Rkok, 2,',',' ');
-		  echo "Koko arvo: <br>Rkok - $Rkok Ω";
-	   }
-	
-	   kaava();
-	
-     ?>
+   <form action="laske1.php" method="POST"> 
+        R1: <input type="number" name="R1"><br> 
+        R2: <input type="number" name="R2"><br>
+        R3: <input type="number" name="R3"><br><br>	  
+        <input type="submit" value="Lähetä">
+     </form>
    </div>
  </body>
 </html>

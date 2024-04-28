@@ -3,8 +3,6 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="koodaukset.css">
-  <link rel="stylesheet" href="phptaulukko.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
@@ -31,18 +29,18 @@
  <body>
    <div class="jersey-10-regular vari2">
    <?php
-      
-       function etuNimi($nimi, $ika)
+	   $korkeus1 = 135;
+	   $korkeus2 = 80;
+	   $korkeus3 = 350;
+       function Korkeus($minKorkeus = 50)
 	   {
-		  $vuosi = 2024; #esim. nykyinen vuosi
-		  $svuosi = $vuosi - $ika; #lasketaan syntymäpäivän vuosi
-          echo "$nimi Rupunen. Syntyi vuonna $svuosi. <br>";
-       }
-       etuNimi("Tuomas", "25");
-       etuNimi("Henri", "27");
-       etuNimi("Petteri", "30"); 	
-	  
-	 ?>
+		   echo "Korkeus on: $minKorkeus. <br>";
+	   }
+	   Korkeus($korkeus1);
+	   Korkeus();
+	   Korkeus($korkeus2);
+	   Korkeus($korkeus3);
+     ?>
    </div>
  </body>
 </html>

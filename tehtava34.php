@@ -29,23 +29,20 @@
  <body>
    <div class="jersey-10-regular vari2">
    <?php
-      
-       function kaava()
-	   {
-		  $R1 = 100;
-	      $R2 = 100;
-	      $R3 = 100;
+  
+  $R1 = 100;
+  $R2 = 100;
+  $R3 = 100;
 
-		  $Rkok = 1 / ((1 / $R1) + (1 / $R2) + (1 / $R3));
-		
-		  echo "Arvot ovat: <br> RI - $R1 Ω <br>R2 - $R2 Ω <br>R3 - $R3 Ω <br>";
-		  $Rkok = number_format($Rkok, 2,',',' ');
-		  echo "Koko arvo: <br>Rkok - $Rkok Ω";
-	   }
-	
-	   kaava();
-	
-     ?>
+  function laskeminen($R1, $R2, $R3) {
+
+ $Rkok = 1 / ((1 / $R1) + (1 / $R2) + (1 / $R3));
+ $Rkok = number_format($Rkok, 2,',',' ');
+ return $Rkok;
+}
+
+echo "1 / ((1 / 100) + (1 / 100) + (1 / 100)) = " . laskeminen($R1, $R2, $R3) . " Ω";
+?>
    </div>
  </body>
 </html>
